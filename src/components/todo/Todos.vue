@@ -10,7 +10,7 @@ const save = () => {
 const get = () => {
   const store = JSON.parse(localStorage.getItem("tailwindtodos"));
   console.log(store);
-  todos.value = store;
+  todos.value = store || [];
 };
 onMounted(() => {
   get();
